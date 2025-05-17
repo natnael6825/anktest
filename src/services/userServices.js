@@ -50,7 +50,7 @@ export const updateUser = async (name,chatId) => {
   try {
     const token = Cookies.get("token"); 
     const bodyData = {
-      name,chatId
+      name,chat_id:chatId
     };
     const response = await fetch(`${baseUrl}/updateUser`, {
       method: "POST",
