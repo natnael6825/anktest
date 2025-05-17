@@ -74,7 +74,7 @@ function EnterName() {
   
         
           // Redirect to the stored redirect route (or default to "/home").
-          const destination = redirectRoute || "/home";
+          const destination = redirectRoute || "/postForm";
           dispatch(clearRedirectRoute());
           navigate(destination);
           window.location.reload();
@@ -92,7 +92,7 @@ function EnterName() {
 
       
         // Redirect to the stored redirect route (or default to "/home").
-        const destination = redirectRoute || "/home";
+        const destination = redirectRoute || "/postForm";
         dispatch(clearRedirectRoute());
         navigate(destination);
         window.location.reload();
