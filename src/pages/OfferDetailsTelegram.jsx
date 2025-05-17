@@ -78,6 +78,9 @@ console.log(id , paramCategory)
       try {
         const filters = { offerId: id, category: paramCategory };
         const response = await fetchOfferByFilterNoToken(filters);
+
+
+
         if (response && Array.isArray(response) && response.length > 0) {
           dispatch(setSelectedOffer(response[0]));
         } else {
@@ -293,7 +296,7 @@ console.log(id , paramCategory)
   // Render product or seller details based on activeTab
   const renderContent = () => {
     if (activeTab === "product") {
-      const { region, grade, class: productClass, process, brand_name, type, size, season } = selectedOffer || {};
+      const { region, grade, class: productClass,item_status, process, brand_name, type, size, season } = selectedOffer || {};
       const productDetails = [
         { label: "Region", value: region },
         { label: "Grade", value: grade },
@@ -303,6 +306,7 @@ console.log(id , paramCategory)
         { label: "Type", value: type },
         { label: "Size", value: size },
         { label: "Season", value: season },
+        { label: "Item Status", value: item_status },
       ].filter((detail) => detail.value);
 
       return (

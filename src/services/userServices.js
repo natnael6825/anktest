@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 // const baseUrl = "https://eac.awakilo.com/api/UserService";
-const baseUrl = "http://localhost:9050/api/UserService";
+const baseUrl = "https://backend.ankuaru.com/api/UserService";
 
 const getCookie = (name) => {
   const cookieArr = document.cookie.split(";");
@@ -155,8 +155,10 @@ export const fetchOfferByFilterNoToken = async ({
       },
     });
 
-    
-    return response.data;
+
+
+
+    return response.data.offers;
   } catch (error) {
     console.error("Error fetching offers by filter:", error.message);
 

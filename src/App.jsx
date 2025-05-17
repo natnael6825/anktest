@@ -9,7 +9,7 @@ import Posting_form_admin from "./pages/posting_form_admin";
 import Admin from "./pages/admin";
 import Viewpost from "./pages/viewPostUser";
 
- 
+
 
 import Profile from "./pages/profile";
 import Otp from "./pages/otp";
