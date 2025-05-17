@@ -46,11 +46,11 @@ export const verifyOtp = async (phoneNumber, otp ,verificationId , chatId ,isUpd
   }
 };
 
-export const updateUser = async (name) => {
+export const updateUser = async (name,chatId) => {
   try {
     const token = Cookies.get("token"); 
     const bodyData = {
-      name,
+      name,chatId
     };
     const response = await fetch(`${baseUrl}/updateUser`, {
       method: "POST",

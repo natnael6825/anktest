@@ -65,7 +65,7 @@ function EnterName() {
       }
 
       if (chatId) {
-        const response = await updateUser(form.fullName);
+        const response = await updateUser(form.fullName,chatId);
 
         if (response && response.message === "User updated successfully.") {
           // Update the user object in cookies.
@@ -83,7 +83,7 @@ function EnterName() {
         }  
       }
       // Update the user's name.
-      const response = await updateUser(form.fullName);
+      const response = await updateUser(form.fullName,chatId);
 
       if (response && response.message === "User updated successfully.") {
         // Update the user object in cookies.
