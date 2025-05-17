@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 // const baseUrl = "https://eac.awakilo.com/api/UserService";
-const baseUrl = "http://localhost:7050/api/UserService";
+const baseUrl = "http://localhost:9050/api/UserService";
 
 const getCookie = (name) => {
   const cookieArr = document.cookie.split(";");
