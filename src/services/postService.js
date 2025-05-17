@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const baseUrl = "https://eac.awakilo.com/api/UserService";
-const baseUrl = "https://localhost:9050/api/Admin"
+const baseUrl = "http://localhost:9050/api/Admin"
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
@@ -62,7 +62,7 @@ export const uploadFile = async (file) => {
     // Append fileName if your backend requires it.
     formData.append("fileName", file.name);
 
-    const response = await axios.post(`https://localhost:9050/api/Fileupload/upload`, formData, {
+    const response = await axios.post(`http://localhost:9050/api/Fileupload/upload`, formData, {
       headers: {
         "Content-Type": "multipart/form-data"
       }

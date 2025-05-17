@@ -14,15 +14,15 @@ import Cookies from "js-cookie";
 // };
 
 const categoryUrls = {
-  "Coffee / ቡና": "https://localhost:9050/api/CoffeeandMainCommodity",
-  "Spice & Herbs / ቅመማ ቅመሞቾ": "https://localhost:9050/api/spices",
-  "Building Materials / የግንባታ እቃዎች": "https://localhost:9050/api/BuildingMaterials",
-  "Grains and Cereals / የእህል ሰብሎች": "https://localhost:9050/api/GrainsandCerials",
-  "Pulses & Legumes / ጥራጥሬዎች ": "https://localhost:9050/api/pulse",
-  "Oil Seeds / የቅባት እህሎች": "https://localhost:9050/api/oilSeed",
-  "Root Crops / የስራስር ሰብሎች": "https://localhost:9050/api/rootCrop",
-  "Vegetables  / አትክልቶች": "https://localhost:9050/api/vegetable",
-  "Fruit Crops / ፍራፍሬች": "https://localhost:9050/api/fruit",
+  "Coffee / ቡና": "http://localhost:9050/api/CoffeeandMainCommodity",
+  "Spice & Herbs / ቅመማ ቅመሞቾ": "http://localhost:9050/api/spices",
+  "Building Materials / የግንባታ እቃዎች": "http://localhost:9050/api/BuildingMaterials",
+  "Grains and Cereals / የእህል ሰብሎች": "http://localhost:9050/api/GrainsandCerials",
+  "Pulses & Legumes / ጥራጥሬዎች ": "http://localhost:9050/api/pulse",
+  "Oil Seeds / የቅባት እህሎች": "http://localhost:9050/api/oilSeed",
+  "Root Crops / የስራስር ሰብሎች": "http://localhost:9050/api/rootCrop",
+  "Vegetables  / አትክልቶች": "http://localhost:9050/api/vegetable",
+  "Fruit Crops / ፍራፍሬች": "http://localhost:9050/api/fruit",
 };
 
 export const addProducts = async (productData, categoryName, picture_link) => {
@@ -368,7 +368,7 @@ export const fruitCropsOffer = async (
 export const getCategories = async () => {
   try {
     const response = await axios.get(`https://eac.awakilo.com/api/Preference/categories`);
-    // const response = await axios.get(`https://localhost:9050/api/Preference/categories`);
+    // const response = await axios.get(`http://localhost:9050/api/Preference/categories`);
     return response.data.categories
 
   } catch (error) {
